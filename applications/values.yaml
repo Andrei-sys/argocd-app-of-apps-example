@@ -4,5 +4,11 @@ certmanager:
 podadmissioncontroller:
   enabled: true
   namespace: infra-pod-admission-controller # namespace in destination cluster 
+promtail:
+  enabled: true
+  namespace: log-monitoring
+loki:
+  enabled: true
+  namespace: log-monitoring
 destination:
   cluster: in-cluster # destination cluster for the apps within the app of apps

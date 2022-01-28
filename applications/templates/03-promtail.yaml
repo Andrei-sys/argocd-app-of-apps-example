@@ -1,0 +1,18 @@
+{{- if .Values.promtail.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: promtail
+spec:
+  destination:
+    name: {{ .Values.destination.cluster }}
+    namespace: {{ .Values.promtail.namespace }}
+  source:
+    path: helm
+    repoURL: 'https://grafana.github.io/helm-charts'
+    targetRevision: main
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+{{- end }}
