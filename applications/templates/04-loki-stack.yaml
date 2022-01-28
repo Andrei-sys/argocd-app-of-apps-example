@@ -10,7 +10,7 @@ spec:
   source:
     path: helm
     repoURL: 'https://grafana.github.io/helm-charts'
-    targetRevision: main
+    targetRevision: "*"
     chart: loki-distributed
   project: default
   syncPolicy:

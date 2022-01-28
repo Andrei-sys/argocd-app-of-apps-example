@@ -10,7 +10,7 @@ spec:
   source:
     path: helm
     repoURL: 'https://grafana.github.io/helm-charts'
-    targetRevision: main
+    targetRevision: "*"
     chart: promtail
   project: default
   syncPolicy:
